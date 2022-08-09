@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar-expand-md{
+ background-color: rgba(59, 59, 59, 0.822);
+}
+.container{
+    margin: 1%;
+}
+
