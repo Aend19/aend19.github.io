@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .cards {
+    display: flex;
+  }
+  
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    /*Quitar esto si no quieres efecto 3D */
+  }
+  
+  /* este contenedor es necesario para la posicion de adelante y atras*/
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s; /* con esto  mueves  el tiempo giratorio de la carta*/
+    transform-style: preserve-3d;
+  }
+  
+  /* Haga un giro horizontal cuando mueva el mouse sobre el contenedor de la caja de volteo */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Posicion de adelante y atras*/
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* la parte de adelante si no pones una imagen */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* parte de atras de la carta*/
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
